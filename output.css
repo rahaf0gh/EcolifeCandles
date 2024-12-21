@@ -1000,29 +1000,26 @@ nav, footer {
 .homeHeader{
   background: url(imgs/homepage.png);
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .homeHeader h1{
   font-size: 230px;
-}
-.big-text{
-  font-size: 300px;
-  font-weight: bolder;
-  --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity, 1));
-}
+  font-weight: bolder;
+  margin-top: -60px;
 
+}
 .headerFont {
   font-family: "Playwrite GB S Guides", cursive;
   font-weight: 400;
   font-style: italic;
 }
-
 header p {
   font-size: 1.5rem;
   line-height: 2rem;
+  margin-top: -60px;
 }
 
 /* -------------------------  */
