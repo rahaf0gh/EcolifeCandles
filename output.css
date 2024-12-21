@@ -1016,7 +1016,7 @@ nav, footer {
   font-weight: 400;
   font-style: italic;
 }
-header p {
+.small-p{
   font-size: 1.5rem;
   line-height: 2rem;
   margin-top: -60px;
@@ -1163,20 +1163,21 @@ section .cards .card .card-content{
     padding: 0.25rem;
   }
 
-  header .big-text{
+  .homeHeader h1{
     font-size: 130px;
   }
-
   header p{
     font-size: 24px;
   }
-
   .headerFont {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-style: normal;
   }
-
+  .small-p{
+    margin-top: -30px;
+  }
+  
   header.headerFont {
     padding: 1.5rem;
     padding-top: 4rem;
