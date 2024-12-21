@@ -1261,6 +1261,8 @@ section .cards .card .card-content{
     position: absolute;
     width: 100%;
     bottom: 0;
+
+    margin-top: 26px;
   }
   /* ----------------------------- cart  */
   .cart-title{
