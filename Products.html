@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Products</title>
+</head>
+<body>
+    <nav style="z-index: 3;">
+        <div class="logo text-center">
+            <a href="index.html" class="logo text-4xl font-bold">Ecolife<sub>Candles</sub></a>
+        </div>
+
+        <div id="UlNav" class="flex-bet-center text-lg">
+            <a href="Products.html" class="transition">Products</a>
+            <a href="contactUs.html" class="transition">Contact Us</a>
+            <a href="login.html" class="transition"><i class="fa-solid fa-user text-lg mr-1"></i>Register</a>
+            <a href="AddtoCart.html" class="transition Nav-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <i id="bar-btn" class="fa-solid fa-bars" onclick="displayMenu()"></i>
+        <i id="amark-btn" class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+    </nav>
+
+    <div class="products">
+        <div class="Products-sections px-24 py-8 text-colour">
+            
+                <h2 class="text-center text-5xl font-semibold pb-8">Products</h2>
+                <div class="cards flex-bet-center gap-10">
+                    <div class="card Shadow block4 w-1/3">
+                        <div class="img" style="width: 100%;">
+                            <img src="imgs/Citrus Sunrise.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="product-text p-3 px-4 h-56 flex flex-col justify-between">
+                            <div class="product-name">
+                                <p style="margin-bottom: 4px;"><b>Citrus Sunrise</b></p>
+                            </div>
+                            <p class="product-description">A citrus-scented soy wax candle in a tin, paired with fresh orange slices, bringing a refreshing and zesty vibe.</p>
+
+                            <div class="product-rating">
+                                <p class="text-sm">4.8
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                </p>
+                                <div class="product-price flex-bet-center mt-3">
+                                    <button class="card-btn px-3 rounded-md" style="padding-top: 2px;padding-bottom:2px;" onclick="addToCart('Citrus Sunrise', 33)">Add to cart</button>
+                                    <p>$33 USD</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="card Shadow block4 w-1/3">
+                        <div class="img" style="width: 100%;">
+                            <img src="imgs/Eucalyptus Calm.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="product-text p-3 px-4 h-56 flex flex-col justify-between">
+                            <div class="product-name">
+                                <p style="margin-bottom: 4px;"><b>Eucalyptus Calm</b></p>
+                            </div>
+                            <p class="product-description">A square eco-friendly candle with eucalyptus scent, placed on a stone tray with eucalyptus leaves for a soothing atmosphere.</p>
+
+                            <div class="product-rating">
+                                <p class="text-sm">3.9
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                </p>
+                                <div class="product-price flex-bet-center mt-3">
+                                    <button class="card-btn px-3 rounded-md" style="padding-top: 2px;padding-bottom:2px;" onclick="addToCart('Eucalyptus Calm', 47)">Add to cart</button>
+                                    <p>$47 USD</p>
+                                </div> 
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="card Shadow block4 w-1/3">
+                        <div class="img">
+                            <img src="imgs/Honey Glow.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="product-text p-3 px-4 h-56 flex flex-col justify-between">
+                            <div class="product-name">
+                                <p style="margin-bottom: 4px;"><b>Honey Glow</b></p>
+                            </div>
+                            <p class="product-description"> unique honeycomb-shaped beeswax candle, paired with a honey dipper and small honey jars, offering a sweet and warm fragrance.</p>
+
+                            <div class="product-rating">
+                                <p class="text-sm">4.8
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                </p>
+                                <div class="product-price flex-bet-center mt-3">
+                                    <button class="card-btn px-3 rounded-md" style="padding-top: 2px;padding-bottom:2px;" onclick="addToCart('Honey Glow', 67)">Add to cart</button>
+                                    <p>$67 USD</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            
+
+            
+                <div class="cards flex-bet-center gap-10 mt-10">
+                    <div class="card Shadow block4 w-1/3">
+                        <div class="img">
+                            <img src="imgs/Lavender Bliss.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="product-text p-3 px-4 h-56 flex flex-col justify-between">
+                            <div class="product-name">
+                                <p style="margin-bottom: 4px;"><b>Lavender Bliss</b></p>
+                            </div>
+                            <p class="product-description">A lavender-scented candle in a frosted glass jar, surrounded by fresh lavender sprigs. Its calming aroma is perfect for relaxation.</p>
+
+                            <div class="product-rating">
+                                <p class="text-sm">5.0
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                </p>
+                                <div class="product-price flex-bet-center mt-3">
+                                    <button class="card-btn px-3 rounded-md" style="padding-top: 2px;padding-bottom:2px;" onclick="addToCart('Lavender Bliss', 44)">Add to cart</button>
+                                    <p>$44 USD</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card Shadow block4 w-1/3">
+                        <div class="img">
+                            <img src="imgs/Vanilla Harmony.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="product-text p-3 px-4 h-56 flex flex-col justify-between">
+                            <div class="product-name">
+                                <p style="margin-bottom: 4px;"><b>Vanilla Harmony</b></p>
+                            </div>
+                            <p class="product-description">A white pillar candle with a warm vanilla scent, displayed on a rustic wooden tray, ideal for a cozy ambiance.</p>
+
+                            <div class="product-rating">
+                                <p class="text-sm">4.8
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                </p>
+                                <div class="product-price flex-bet-center mt-3">
+                                    <button class="card-btn px-3 rounded-md" style="padding-top: 2px;padding-bottom:2px;" onclick="addToCart('Vanilla Harmony', 69)">Add to cart</button>
+                                    <p>$69 USD</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+                    
+                    <div class="card Shadow block4 w-1/3">
+                        <div class="img">
+                            <img src="imgs/Ocean Breeze.png" alt="" style="width: 100%;">
+                        </div>
+                        <div class="product-text p-3 px-4 h-56 flex flex-col justify-between">
+                            <div class="product-name">
+                                <p style="margin-bottom: 4px;"><b>Ocean Breeze</b></p>
+                            </div>
+                            <p class="product-description">A calming ocean-themed candle with a light blue color, infused with the refreshing scent of sea salt and coastal breezes.</p>
+
+                            <div class="product-rating">
+                                <p class="text-sm">4.8
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                    <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                                </p>
+                                <div class="product-price flex-bet-center mt-3">
+                                    <button class="card-btn px-3 rounded-md" style="padding-top: 2px;padding-bottom:2px;" onclick="addToCart('Ocean Breeze', 38)">Add to cart</button>
+                                    <p>$38 USD</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="customers-feedback px-12 my-12">
+        <p class="text-3xl mb-5 text-colour">Customer's <b>Feedback</b></p>
+        <div class="cards flex-bet-center gap-4">
+            <div class="customer Shadow block4">
+                <div class="customer-img flex items-center">
+                    <i class="fa-solid fa-user text-lg mr-1"></i>
+                    <p><b>Abdulaziz</b></p>
+                </div>
+                <div class="customer-text">
+                    <p>Jeddah</p>
+                    <div class="product-rating">
+                        <p class="text-sm">4.5
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                        </p>
+                    </div>
+                    <p class="customer-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="customer Shadow block4">
+                <div class="customer-img flex items-center">
+                    <i class="fa-solid fa-user text-lg mr-1"></i>
+                    <p><b>Seham</b></p>
+                </div>
+                <div class="customer-text">
+                    <p>Abha</p>
+                    <div class="product-rating">
+                        <p class="text-sm">3.5
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                        </p>
+                    </div>
+                    <p class="customer-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="customer Shadow block4">
+                <div class="customer-img flex items-center">
+                    <i class="fa-solid fa-user text-lg mr-1"></i>
+                    <p><b>Unknown</b></p>
+                </div>
+                <div class="customer-text">
+                    <p>Taif</p>
+                    <div class="product-rating">
+                        <p class="text-sm">4
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                        </p>
+                    </div>
+                    <p class="customer-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="flex-bet-center">
+        <div class="location my-5">
+            <a href="index.html" class="logo text-4xl font-bold">EcoLife<sub>Candles</sub></a>
+        </div>
+        </div>
+
+        <div class="contact-us text-left">
+            <h1 class="text-xl font-semibold mb-3">Contact Us</h1>
+            <div class="icon-container">
+                <i class="fa-brands fa-whatsapp text-lg mr-1"></i>
+                <a href="#">+966 50 239 9761</a>
+            </div>
+
+            <div class="icon-container" style="margin-bottom: 2px; margin-top: 2px;">
+                <i class="fa-solid fa-x text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+
+            <div class="icon-container">
+                <i class="fa-brands fa-instagram text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javaScript.js"></script>
+</body>
+</html>

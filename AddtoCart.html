@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Shopping Cart</title>
+    <style>
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        .total {
+            text-align: right;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .empty {
+            text-align: center;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <nav style="z-index: 3;">
+        <div class="logo text-center">
+            <a href="index.html" class="logo text-4xl font-bold">Ecolife<sub>Candles</sub></a>
+        </div>
+
+        <div id="UlNav" class="flex-bet-center text-lg">
+            <a href="Products.html" class="transition">Products</a>
+            <a href="contactUs.html" class="transition">Contact Us</a>
+            <a href="login.html" class="transition"><i class="fa-solid fa-user text-lg mr-1"></i>Register</a>
+            <a href="AddtoCart.html" class="transition Nav-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <i id="bar-btn" class="fa-solid fa-bars" onclick="displayMenu()"></i>
+        <i id="amark-btn" class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+    </nav>
+
+
+    <h1 class="text-3xl font-semibold m-7 mx-12 cart-title">Your Cart</h1>
+    <div class="table-container px-12">
+       <table id="cart-table" class="text-colour">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="cart-body">
+            <!-- سيتم إدخال العناصر ديناميكيًا هنا -->
+        </tbody>
+    </table>
+
+    <div class="flex-bet-center">
+        <p class="total font-medium" id="cart-total">Total: $0.00</p>
+        <button onclick="clearCart()" class="bg-slate-800 text-slate-100 p-1 px-2 rounded-md font-medium">Clear Cart</button> 
+    </div>
+    
+    </div>
+    
+    <footer class="flex-bet-center" style="position: absolute; width: 100%; bottom: 0;">
+        <div class="location my-5">
+            <a href="index.html" class="logo text-4xl font-bold">EcoLife<sub>Candles</sub></a>
+        </div>
+        </div>
+
+        <div class="contact-us text-left">
+            <h1 class="text-xl font-semibold mb-3">Contact Us</h1>
+            <div class="icon-container">
+                <i class="fa-brands fa-whatsapp text-lg mr-1"></i>
+                <a href="#">+966 50 239 9761</a>
+            </div>
+
+            <div class="icon-container" style="margin-bottom: 2px; margin-top: 2px;">
+                <i class="fa-solid fa-x text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+
+            <div class="icon-container">
+                <i class="fa-brands fa-instagram text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="javaScript.js"></script>
+</body>
+</html>

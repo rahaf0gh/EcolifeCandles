@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Home Page</title>
+</head>
+
+<body>
+
+    <nav style="z-index: 3;">
+        <div class="logo text-center">
+            <a href="index.html" class="logo text-4xl font-bold">Ecolife<sub>Candles</sub></a>
+        </div>
+
+        <div id="UlNav" class="flex-bet-center text-lg">
+            <a href="Products.html" class="transition">Products</a>
+            <a href="contactUs.html" class="transition">Contact Us</a>
+            <a href="login.html" class="transition"><i class="fa-solid fa-user text-lg mr-1"></i>Register</a>
+            <a href="AddtoCart.html" class="transition Nav-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <i id="bar-btn" class="fa-solid fa-bars" onclick="displayMenu()"></i>
+        <i id="amark-btn" class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+    </nav>
+
+    <header class="text-center p-16  text-2xl headerFont p-colour">
+        <p>Welcome to the world of Ecolife, where we light up your day with nature. Our natural candles are lovingly
+            made from eco-friendly materials to bring relaxation and comfort to your daily life. Choose your perfect
+            candle and enjoy the warm ambiance."
+        </p>
+    </header>
+
+    <header class="homeHeader flex flex-col justify-center items-center pb-14 Numbers">
+        <h1 class="No font-semibold text-green" data-goal="1400">
+            000
+        </h1>
+
+        <p class="text-slate-100 small-p headerFont">Total sales worldwide !!</p>
+    </header>
+
+    <section class="m-auto py-24">
+        <div class="cards flex items-center justify-center gap-12 text-colour">
+
+            <div class="card px-12 py-8 rounded-md shadow block4">
+                <div class="card-content text-center">
+                    <i class="fa-solid fa-magnifying-glass text-4xl"></i>
+                    <h2 class="text-xl font-semibold mt-5"><a href="Products.html">Explore all Products</a></h2>
+                </div>
+            </div>
+
+            <div class="card px-12 py-8 rounded-md shadow block4">
+                <div class="card-content text-center">
+                    <i class="fa-solid fa-phone text-4xl"></i>
+                    <h2 class="text-xl font-semibold mt-5"><a href="contactUs.html">Contact Us</a></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="flex-bet-center">
+        <div class="location my-5">
+            <a href="index.html" class="logo text-4xl font-bold">EcoLife<sub>Candles</sub></a>
+        </div>
+        </div>
+
+        <div class="contact-us text-left">
+            <h1 class="text-xl font-semibold mb-3">Contact Us</h1>
+            <div class="icon-container">
+                <i class="fa-brands fa-whatsapp text-lg mr-1"></i>
+                <a href="#">+966 50 239 9761</a>
+            </div>
+
+            <div class="icon-container" style="margin-bottom: 2px; margin-top: 2px;">
+                <i class="fa-solid fa-x text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+
+            <div class="icon-container">
+                <i class="fa-brands fa-instagram text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="javaScript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Login Page</title>
+</head>
+
+<body>
+    <nav style="z-index: 3;">
+        <div class="logo text-center">
+            <a href="index.html" class="logo text-4xl font-bold">Ecolife<sub>Candles</sub></a>
+        </div>
+
+        <div id="UlNav" class="flex-bet-center text-lg">
+            <a href="Products.html" class="transition">Products</a>
+            <a href="contactUs.html" class="transition">Contact Us</a>
+            <a href="login.html" class="transition"><i class="fa-solid fa-user text-lg mr-1"></i>Register</a>
+            <a href="AddtoCart.html" class="transition Nav-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+
+        <i id="bar-btn" class="fa-solid fa-bars" onclick="displayMenu()"></i>
+        <i id="amark-btn" class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+    </nav>
+
+    <header class="py-24 px-28 relative contactus-header">
+        <div class="flex items-center justify-center gap-10 contact-content">
+        <div class="img block4">
+        <form action="" id="loginForm" class="flex flex-col w-full bg-color text-colour p-8 rounded-md">
+            <h2 class="text-3xl text-center font-bold block4">Login</h2>
+
+            <div class="social-icons text-center mt-6 ">
+                <a href="#"><i class="fa-brands fa-x-twitter transition"></i></a>
+                <a href="#"><i class="fa-brands fa-google transition"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in transition"></i></a>
+                <a href="#"><i class="fa-brands fa-github transition"></i></a>
+            </div>
+
+            <samp class="text-center text-sm mt-3">or use your email for registration</samp>
+
+
+            <label for="" class="mt-3">Username</label>
+            <input type="text" id="username" placeholder="Username" required class="inputStyle block1">
+            
+            <label for="" class="mt-3">Password</label>
+            <input type="password" id="password" placeholder="Password" required class="inputStyle block1">
+
+            <button type="submit" class="card-btn rounded-3xl font-semibold text-xl mt-9" style="padding: 4px;">Login</button>
+            <p class="text-center text-sm mt-2">Don't Have an Account?<a href="register.html" style="text-decoration: underline;">Register</a></p>
+        </form>
+    </div>
+    </div>
+    </header>
+    
+    <footer class="flex-bet-center login-footer">
+        <div class="location my-5">
+            <a href="index.html" class="logo text-4xl font-bold">EcoLife<sub>Candles</sub></a>
+        </div>
+        </div>
+
+        <div class="contact-us text-left">
+            <h1 class="text-xl font-semibold mb-3">Contact Us</h1>
+            <div class="icon-container">
+                <i class="fa-brands fa-whatsapp text-lg mr-1"></i>
+                <a href="#">+966 50 239 9761</a>
+            </div>
+
+            <div class="icon-container" style="margin-bottom: 2px; margin-top: 2px;">
+                <i class="fa-solid fa-x text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+
+            <div class="icon-container">
+                <i class="fa-brands fa-instagram text-lg mr-1"></i>
+                <a href="#">@EcoCandles_99</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        async function encryptData(publicKey, data) {
+          const encoder = new TextEncoder();
+          const encodedData = encoder.encode(data);
+          const key = await window.crypto.subtle.importKey(
+            "spki",
+            publicKey,
+            { name: "RSA-OAEP", hash: "SHA-256" },
+            true,
+            ["encrypt"]
+          );
+    
+          return window.crypto.subtle.encrypt(
+            { name: "RSA-OAEP" },
+            key,
+            encodedData
+          );
+        }
+    
+        document.getElementById("loginForm").addEventListener("submit", async (event) => {
+          event.preventDefault();
+    
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+    
+          const publicKeyResponse = await fetch('/public_key.php'); // جلب المفتاح العام
+          const publicKey = await publicKeyResponse.text();
+          const binaryPublicKey = new Uint8Array([...publicKey].map(char => char.charCodeAt(0))).buffer;
+    
+          const encrypted = await encryptData(binaryPublicKey, JSON.stringify({ username, password }));
+          const encryptedBase64 = btoa(String.fromCharCode(...new Uint8Array(encrypted)));
+    
+          const url = `/display.php?encryptedData=${encodeURIComponent(encryptedBase64)}`;
+          window.location.href = url;
+        });
+      </script>
+      
+    <script src="javaScript.js"></script>
+</body>
+
+</html>

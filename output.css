@@ -1,0 +1,1045 @@
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.m-7 {
+  margin: 1.75rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.-mt-0\.5 {
+  margin-top: -0.125rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-56 {
+  height: 14rem;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-slate-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-16 {
+  padding: 4rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.px-28 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-slate-100 {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+}
+
+/* --------------------------------------------------- My css code start  */
+.bg-color,
+nav,
+footer{
+  background-color: #D8DBBD;
+}
+
+.text-colour,
+.logo,
+#UlNav,
+footer .contact-us{
+  color: #2A3663;
+}
+
+.product-name b,
+.customer-img,
+.cart-title{
+  color: #18234a;
+}
+
+.card-btn,
+.submit-btn{
+  background-color: #2A3663;
+  color: #fafced;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.submit-btn {
+  padding: 0.5rem;
+}
+
+.p-colour{
+  color: #B59F78;
+}
+
+/* -------------  */
+
+.flex-bet-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transition{
+  transition: all 0.2 ease-in;
+}
+
+.Shadow{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* ---------------- */
+
+nav, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media not all and (min-width: 640px) {
+  nav, footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.logo a{
+  line-height: 9px;
+}
+
+#UlNav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+#UlNav a {
+  cursor: pointer;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+#UlNav a:hover{
+  background-color: #abae8976;
+  transition: all 0.2s ease-in-out;
+}
+
+#UlNav .Nav-icon{
+  border-radius: 50%;
+}
+
+#bar-btn,
+#amark-btn {
+  cursor: pointer;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  display: none;
+  color: #2A3663;
+}
+
+/* -------------  */
+
+.homeHeader{
+  background: url(imgs/homepage.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeHeader h1{
+  font-size: 230px;
+  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
+  font-weight: bolder;
+  margin-top: -60px;
+
+}
+.headerFont {
+  font-family: "Playwrite GB S Guides", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+.small-p{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: -60px;
+}
+
+/* -------------------------  */
+
+section .cards .card .card-content{
+  width: 188px;
+}
+
+.card:hover, .customer:hover{
+  scale: 1.02;
+  transition: all 0.2s ease-in-out;
+}
+
+.Products-sections .card:hover{
+  scale: 1;
+}
+
+/* ----------------------- customer feedback  */
+
+.customers-feedback .customer {
+  padding: 1rem;
+  background-color: #D8DBBD;
+  color: #2A3663;
+}
+
+/* ----------------------------- contact us page  */
+.contactUs-bg{
+  background-color: #f9f9eeeb;
+}
+
+.block1{
+  display: block;
+}
+
+.inputStyle {
+  border-radius: 0.125rem;
+  padding: 0.25rem;
+  outline: none;
+}
+
+.twoInput .inputStyle{
+  width: 210px;
+}
+
+.twoInput .inputSelect{
+  width: 100px;
+}
+
+.contactus-header .contact-content .img{
+  width: 380px;
+}
+
+/* --------------------------  */
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.block4{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+/* ------------------------- register*/
+
+.social-icons a{
+  border: 1px solid #2A3663;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 18px;
+}
+
+.social-icons a:hover{
+  background-color: #2A3663;
+  color: #D8DBBD;
+}
+
+/* ----------------- Fixed Size */
+
+@media not all and (min-width: 640px) {
+  nav, footer {
+    position: relative;
+    padding: 1rem;
+  }
+
+  #UlNav{
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.059);
+    background-color: #D8DBBD;
+  }
+
+  #UlNav a{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #2A3663;
+  }
+
+  #UlNav .Nav-icon{
+    border-radius: 0;
+  }
+
+  #bar-btn{
+    display: block;
+  }
+
+  .logo a, footer .location a,
+    .contactus-header h3 {
+    font-size: 20px;
+    line-height: 2rem;
+    line-height: 16px;
+  }
+
+  .contact-us .icon-container a {
+    font-size: 10px;
+    line-height: 1rem;
+  }
+
+  /* ---------------------- header  */
+
+  header {
+    padding: 0.25rem;
+  }
+
+  .homeHeader h1{
+    font-size: 130px;
+  }
+  header p{
+    font-size: 24px;
+  }
+  .headerFont {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .small-p{
+    margin-top: -30px;
+  }
+  
+  header.headerFont {
+    padding: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* ------------------------- section */
+
+  section .cards,
+    .Products-sections .cards,
+    .customers-feedback .cards,
+    .contactus-header .contact-content {
+    flex-direction: column;
+  }
+
+  section .cards .card .card-content{
+    width: 250px;
+  }
+
+  footer{
+    display: block;
+    text-align: center;
+  }
+
+  footer .contact-us{
+    font-size: 12px;
+  }
+
+  /* product page -------------------- */
+
+  .Products-sections .card{
+    width: 350px;
+  }
+
+  .products h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .Products-sections .card{
+    width: 350px;
+  }
+
+  .contactus-header {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .contactus-header .contact-content .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactus-header .contact-content .img{
+    width: 350px;
+  }
+
+  .twoInput .inputStyle{
+    width: 62%;
+  }
+
+  .twoInput .inputSelect{
+    font-size: 16px;
+    width: 102px;
+  }
+
+  samp{
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  /* ------------ contact us  */
+
+  .contactus-header a {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  /* login-footer ------------  */
+  .login-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    margin-top: 26px;
+  }
+}
