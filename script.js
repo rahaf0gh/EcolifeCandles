@@ -9,6 +9,8 @@ XZdmAhBuFnD3FSSaFL8RjL58ZvrBtqYWLoZXCTxS+swX0/flLwjdjggtEAef8Way
 LwIDAQAB
 -----END PUBLIC KEY-----`;
 
+const backendURL = "https://ecolife-candles.vercel.app/decrypt";
+
 // تحويل المفتاح العام النصي إلى CryptoKey
 async function importPublicKey(pem) {
   // إزالة رؤوس المفتاح
@@ -84,11 +86,12 @@ decryptBtn.addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/decrypt", {
+    const response = await fetch(backendURL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ encryptedMessage }),
     });
+    
 
     if (!response.ok) {
       throw new Error("Failed to decrypt the message.");
